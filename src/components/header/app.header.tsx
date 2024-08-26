@@ -24,10 +24,9 @@ interface Props {
 }
 
 const drawerWidth = 240;
-// const navItems = ['Home', 'Create'];
 const navItems = [
   { id: 1, name: "Home", path: "/" },
-  { id: 2, name: "Create Blog", path: "/create-blog" },
+  // { id: 2, name: "Create Blog", path: "/create-blog" },
 ];
 
 const AppHeader = (props: Props) => {
@@ -44,7 +43,7 @@ const AppHeader = (props: Props) => {
       <Typography variant="h6" sx={{
         my: 2,
         fontFamily: dmSans.style,
-      }}>
+      }} onClick={() => router.push("/")}>
         Blog Website
       </Typography>
       <Divider />
@@ -52,7 +51,7 @@ const AppHeader = (props: Props) => {
         {navItems.map((item) => (
           <ListItem key={item.id} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.name} />
+              <ListItemText primary={item.name} onClick={() => router.push(`${item.path}`)} />
             </ListItemButton>
           </ListItem>
         ))}

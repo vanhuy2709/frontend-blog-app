@@ -64,7 +64,7 @@ const NewsPost = (props: IProps) => {
         }}
       ></div>
 
-      <Stack direction="row" justifyContent="flex-end" spacing={2}>
+      {/* <Stack direction="row" justifyContent="flex-end" spacing={2}>
         <IconButton
           children={<EditIcon />}
           color="warning"
@@ -73,9 +73,9 @@ const NewsPost = (props: IProps) => {
           children={<DeleteIcon />}
           color="error"
           onClick={() => setOpenModalDelete(true)} />
-      </Stack>
+      </Stack> */}
 
-      <ModalEditBlog
+      {/* <ModalEditBlog
         openModalEdit={openModalEdit}
         setOpenModalEdit={setOpenModalEdit}
         blog={data}
@@ -85,7 +85,7 @@ const NewsPost = (props: IProps) => {
         openModalDelete={openModalDelete}
         setOpenModalDelete={setOpenModalDelete}
         blog={data}
-      />
+      /> */}
     </>
   )
 }
