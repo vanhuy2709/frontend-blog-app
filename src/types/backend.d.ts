@@ -63,15 +63,12 @@ declare global {
   }
 
   interface IBackendRes<T> {
-    // error?: string | string[];
     error?: {
       status: number,
       name: string,
       message: string,
       details: {}
     };
-    // message: string;
-    // statusCode: number | string;
     data?: T,
     meta?: {
       pagination: {

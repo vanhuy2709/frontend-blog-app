@@ -7,6 +7,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Image from 'next/image';
 
 const AppHero = () => {
+
   return (
     <Box sx={{
       backgroundColor: '#FCF7EF',

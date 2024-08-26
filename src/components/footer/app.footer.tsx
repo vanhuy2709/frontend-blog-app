@@ -4,28 +4,15 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Image from "next/image";
 import { dmSans } from "@/lib/font";
-import useMediaQuery from '@mui/material/useMediaQuery';
-
-const listServices = [
-  "Customer Service +6282-2876-6862",
-  "We Are Open from Sun - Mon 10 AM - 22 PM"
-]
-
-const listIcons = [
-  { id: 1, name: "spotify", path: "spotify.svg" },
-  { id: 2, name: "instagram", path: "instagram.svg" },
-  { id: 3, name: "tiktok", path: "tiktok.svg" },
-  { id: 4, name: "youtube", path: "youtube.svg" },
-  { id: 5, name: "twitter", path: "twitter.svg" },
-  { id: 6, name: "telegram", path: "telegram.svg" },
-]
+import { listServices, listIcons } from "@/data/footer";
 
 const AppFooter = () => {
   const matches = useMediaQuery('(min-width:600px)');
-  return (
 
+  return (
     <Box sx={{
       backgroundColor: '#121212',
       padding: '50px 0 50px',

@@ -18,26 +18,23 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 import { dmSans } from "@/lib/font";
+import { navItems } from "@/data/header";
 
 interface Props {
   window?: () => Window;
 }
-
-const drawerWidth = 240;
-const navItems = [
-  { id: 1, name: "Home", path: "/" },
-  // { id: 2, name: "Create Blog", path: "/create-blog" },
-];
 
 const AppHeader = (props: Props) => {
   const router = useRouter();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Open menu (mobile)
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  // Mobile mode
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{
@@ -113,7 +110,7 @@ const AppHeader = (props: Props) => {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
           }}
         >
           {drawer}

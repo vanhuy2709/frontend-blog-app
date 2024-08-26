@@ -1,14 +1,14 @@
 'use client';
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { dmSans } from "@/lib/font";
 import Image from "next/image";
-import IconButton from "@mui/material/IconButton";
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
-import ModalEditBlog from "../modal/modal.edit.blog";
-import { useState } from "react";
-import ModalDeleteBlog from "../modal/modal.delete.blog";
+// import Stack from "@mui/material/Stack";
+// import IconButton from "@mui/material/IconButton";
+// import EditIcon from '@mui/icons-material/Edit';
+// import DeleteIcon from '@mui/icons-material/Delete';
+// import ModalEditBlog from "../modal/modal.edit.blog";
+// import { useState } from "react";
+// import ModalDeleteBlog from "../modal/modal.delete.blog";
 
 interface IProps {
   data: IBlog | undefined,
@@ -17,8 +17,8 @@ interface IProps {
 const NewsPost = (props: IProps) => {
 
   const { data } = props;
-  const [openModalEdit, setOpenModalEdit] = useState<boolean>(false);
-  const [openModalDelete, setOpenModalDelete] = useState<boolean>(false);
+  // const [openModalEdit, setOpenModalEdit] = useState<boolean>(false);
+  // const [openModalDelete, setOpenModalDelete] = useState<boolean>(false);
 
   return (
     <>
